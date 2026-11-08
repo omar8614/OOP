@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://omar8614.github.io/OOP/sitemap.xml
