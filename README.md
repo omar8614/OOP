@@ -5,9 +5,9 @@ A free, single-page multiple-choice practice bank for C++ Object-Oriented Progra
 **Live site:** https://omar8614.github.io/OOP/
 
 ## About
-- Based on OOP sessions explained by Eng. Ahmed Mamdouh (ITI Assiut Branch)
+- Based on OOP sessions explained by Eng. Ahmed Mamdoh (ITI Assiut Branch)
 - Notes by Hamza Mohamed, prompts by Omar Mohamed
-- Website structure based on the OS MCQ Bank by Mostafa Naqib
+- Inspired by Operating System MCQ file by Mostafa Naqib
 
 ## Run locally
 Open `index.html` in any browser. No build step needed.

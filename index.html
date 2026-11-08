@@ -788,6 +788,10 @@ html.tab-hidden *,html.tab-hidden *::before,html.tab-hidden *::after{animation-p
 .credits .cr-rights::before,.credits .cr-rights::after{content:"";width:30px;height:1px;border-radius:1px;background:linear-gradient(90deg,transparent,var(--accent))}
 .credits .cr-rights::after{background:linear-gradient(270deg,transparent,var(--accent))}
 
+/* --- phones/tablets: keep the title on a single line --- */
+@media (max-width:640px){.hd h1.ttl{flex-wrap:nowrap;white-space:nowrap;justify-content:flex-start;gap:0 .2em;font-size:clamp(20px,calc((100vw - 76px)/10),64px)}}
+.hd .ttlwrap{display:grid;gap:12px;width:fit-content;max-width:100%}
+.hd .ttlwrap .t-bar{width:100%}
 </style>
 </head>
 <body>
@@ -795,10 +799,10 @@ html.tab-hidden *,html.tab-hidden *::before,html.tab-hidden *::after{animation-p
 <footer class="credits" id="credits" aria-label="Credits">
   <div class="cr-title"><span class="cr-star" aria-hidden="true">✦</span><b>Made with Claude</b><span class="cr-star" aria-hidden="true">✦</span></div>
   <ul class="cr-list">
-    <li style="--i:1"><span class="cr-k">Based on OOP sessions explained by</span><span class="cr-v"><em>Eng. Ahmed Mamdouh</em><span class="cr-tag">ITI Instructor</span></span></li>
+    <li style="--i:1"><span class="cr-k">Based on OOP sessions explained by</span><span class="cr-v"><em>Eng. Ahmed Mamdoh</em><span class="cr-tag">ITI Instructor</span></span></li>
     <li style="--i:2"><span class="cr-k">Notes taken by</span><span class="cr-v"><em>Hamza Mohamed</em><span class="cr-tag">UI Track</span></span></li>
-    <li style="--i:3"><span class="cr-k">Prompts typed by</span><span class="cr-v"><em>Omar Mohamed</em><span class="cr-tag">UI Track</span></span></li>
-    <li style="--i:4"><span class="cr-k">Website structure based on OS MCQ Bank by</span><span class="cr-v"><em>Mostafa Naqib</em><span class="cr-tag">Open Source Track</span></span></li>
+    <li style="--i:3"><span class="cr-k">Prompts by</span><span class="cr-v"><em>Omar Mohamed</em><span class="cr-tag">UI Track</span></span></li>
+    <li style="--i:4"><span class="cr-k">Inspired by Operating System MCQ file by</span><span class="cr-v"><em>Mostafa Naqib</em><span class="cr-tag">Open Source Track</span></span></li>
   </ul>
 <div class="cr-end">
     <p class="cr-wish"><span class="cr-heart" aria-hidden="true">♥</span><b>With our best wishes!</b></p>
@@ -1103,8 +1107,8 @@ function renderStart(){
     .map(([v,t])=>`<button class="tab" type="button" data-act="scope" data-v="${v}">${t}</button>`).join('');
   app.innerHTML=`<div class="wrap">
   <header class="hd"><span class="t-code" aria-hidden="true">// C++ &middot; Object-Oriented Programming</span>
-  <h1 class="ttl" aria-label="OOP MCQ Bank"><span class="t-st" aria-hidden="true">✦</span><span class="t-w t-oop" aria-hidden="true">OOP</span> <span class="t-w t-mcq" aria-hidden="true">MCQ</span> <span class="t-w t-bank" aria-hidden="true">Bank</span><span class="t-st b" aria-hidden="true">✦</span></h1>
-  <span class="t-bar" aria-hidden="true"></span>
+  <div class="ttlwrap"><h1 class="ttl" aria-label="OOP MCQ Bank"><span class="t-st" aria-hidden="true">✦</span><span class="t-w t-oop" aria-hidden="true">OOP</span> <span class="t-w t-mcq" aria-hidden="true">MCQ</span> <span class="t-w t-bank" aria-hidden="true">Bank</span><span class="t-st b" aria-hidden="true">✦</span></h1>
+  <span class="t-bar" aria-hidden="true"></span></div>
   <p class="lead">Multiple-choice practice for C++ and object-oriented programming, one session at a time. Pick the sessions you want, answer one question at a time, then see your score and which topics need another look.</p></header>
   <figure class="stage" aria-label="Animated illustration of the core OOP idea: a class is a blueprint and objects are created from it">
     <div class="stage-fx" aria-hidden="true"></div>
